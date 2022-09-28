@@ -26,8 +26,11 @@ function clickSquare() {
     squares.style.backgroundColor = 'black';
 }
 
+function clearDivs() {
+
+    location.reload();
+}
+
 createDivs(16, 16);
 
-clear.addEventListener('click', function() {
-    location.reload();
-});
+clear.addEventListener('click', clearDivs);

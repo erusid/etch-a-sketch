@@ -51,9 +51,6 @@ function promptUser(numDivs) {
     return createDivs(numDivs);
 }
 
-input.addEventListener('click', (e) => {
-
-    promptUser();
-});
+input.addEventListener('click', promptUser);
 
 clear.addEventListener('click', clearDivs);

@@ -1,3 +1,4 @@
+
 const container = document.createElement('div');
 container.classList.add('container');
 document.body.appendChild(container);
@@ -7,17 +8,25 @@ clear.classList.add('clear');
 clear.textContent = "CLEAR";
 document.body.appendChild(clear);
 
-function createDivs(num1, num2) {
+function createDivs(rows, cols) {
 
-    for ( i = 0; i < num1 * num2; i++ ) {
+    for (i = 0; i < rows; i++) {
 
-        let squares = document.createElement('div');
-        squares.classList.add('squares');
-        container.appendChild(squares);
+        let row = document.createElement('div');
+        row.classList.add('rows');
+        container.appendChild(row);
+    
 
-        squares.addEventListener('mousedown', (e) => {
-            squares.style.backgroundColor = 'black';
-        });
+        for (j = 0; j < cols; j++) {
+
+            let col = document.createElement('div');
+            col.classList.add('columns');
+            row.appendChild(col);
+
+            col.addEventListener('mousedown', (e) => {
+                col.style.backgroundColor = 'black';
+            });
+        }  
     }
 }
 
@@ -31,6 +40,6 @@ function clearDivs() {
     location.reload();
 }
 
-createDivs(16, 16);
+createDivs(32, 32);
 
 clear.addEventListener('click', clearDivs);

@@ -11,24 +11,22 @@ body {
 
 .container {
     background-color: rgb(23, 204, 144);
-    width: 500px;
-    height: auto;
     display: flex;
     /*flex-direction: column;*/
     flex-wrap: wrap;
-    margin: 10px;
-    padding: 67px;
+    margin: 30px;
+    padding: 20px;
 }
 
-.squares {
-    padding: 10px;
-    flex: 1;
+.rows .columns:hover {
+    background-color: black;
+}
+
+.rows .columns {
+    
+    padding: 8px;
     border: 1px;
     background-color: blue;
     border-style: solid;
-
 }
 
-.squares:hover {
-    background-color: black;
-}

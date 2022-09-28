@@ -16,7 +16,6 @@ function createDivs(rows, cols) {
         row.classList.add('rows');
         container.appendChild(row);
     
-
         for (j = 0; j < cols; j++) {
 
             let col = document.createElement('div');

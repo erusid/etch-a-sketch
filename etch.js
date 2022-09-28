@@ -1,4 +1,9 @@
 
+const input = document.createElement('button');
+input.classList.add('input');
+input.textContent = "HOW MANY PIXELS PER SIDE?"
+document.body.appendChild(input);
+
 const container = document.createElement('div');
 container.classList.add('container');
 document.body.appendChild(container);
@@ -8,15 +13,16 @@ clear.classList.add('clear');
 clear.textContent = "CLEAR";
 document.body.appendChild(clear);
 
-function createDivs(rows, cols) {
 
-    for (i = 0; i < rows; i++) {
+function createDivs(divs) {
+
+    for (i = 0; i < divs; i++) {
 
         let row = document.createElement('div');
         row.classList.add('rows');
         container.appendChild(row);
     
-        for (j = 0; j < cols; j++) {
+        for (j = 0; j < divs; j++) {
 
             let col = document.createElement('div');
             col.classList.add('columns');
@@ -39,6 +45,15 @@ function clearDivs() {
     location.reload();
 }
 
-createDivs(32, 32);
+function promptUser(numDivs) {
+
+    numDivs = prompt("How many?");
+    return createDivs(numDivs);
+}
+
+input.addEventListener('click', (e) => {
+
+    promptUser();
+});
 
 clear.addEventListener('click', clearDivs);

@@ -12,8 +12,6 @@ body {
 .container {
     background-color: rgb(23, 204, 144);
     display: flex;
-    /*flex-direction: column;*/
-    flex-wrap: wrap;
     margin: 30px;
     padding: 20px;
 }
@@ -23,7 +21,6 @@ body {
 }
 
 .rows .columns {
-    
     padding: 8px;
     border: 1px;
     background-color: blue;
